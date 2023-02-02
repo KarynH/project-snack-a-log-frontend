@@ -1,3 +1,5 @@
+import Snack from "./Snack";
+
 import axios from "axios";
 import {useEffect, useState} from "react"
 import { Card, Button } from "react-bootstrap";
