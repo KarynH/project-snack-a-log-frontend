@@ -1,4 +1,4 @@
-import Snack from "../Components/Snack";
+import Snacks from "../Components/Snacks";
 export default function Index() {
-    return <Snack />
+    return <Snacks />
 }
