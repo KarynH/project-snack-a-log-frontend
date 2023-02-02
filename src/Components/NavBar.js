@@ -7,7 +7,7 @@ export default function NavBar() {
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="/snacks">Snacks</Navbar.Brand>
-        <Button variant="primary" href="/transactions/new">
+        <Button variant="primary" href="/snacks/new">
           New Snacks
         </Button>{" "}
       </Container>
