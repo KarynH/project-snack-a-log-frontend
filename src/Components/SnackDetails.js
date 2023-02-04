@@ -1,4 +1,6 @@
 export default function SnackDetails() {
 
-    return;
+    return(
+        <p>show page</p>
+    )
 }

@@ -8,11 +8,12 @@ const Snack = ({ snack }) => {
   return (
     <div className="tastySnackAttackId">
       <Card style={{ width: "18rem" }}>
+      <Link to={`/snacks/${snack.id}`}>
         <Card.Img variant="top" src={snack.image} alt={snack.name} />
+        </Link>
         <Card.Body>
-          <Link to={`/snacks/${snack.id}`}>
             <Card.Title>{snack.name}</Card.Title>
-             </Link>
+         
             <span>
               {snack.is_healthy ? (
                 "❤️"

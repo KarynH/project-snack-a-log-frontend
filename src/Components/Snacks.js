@@ -19,9 +19,7 @@ export default function Snacks() {
 
 return( 
 <div className="container">
-<h3>
-       <Badge bg="primary">Snacks</Badge>
-      </h3>
+<h3><Badge bg="primary">Snacks</Badge></h3>
 {
 snacks.map((snack) => {
     return <Snack key={snack.id} snack={snack}/>
