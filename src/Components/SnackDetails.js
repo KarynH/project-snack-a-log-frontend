@@ -9,10 +9,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-
-
 export default function SnackDetails() {
-
   const API = process.env.REACT_APP_API_URL;
   const [snacks, setSnacks] = useState([]);
   const { id } = useParams();
@@ -40,13 +37,17 @@ export default function SnackDetails() {
         (error) => console.error(error)
       )
       .catch((c) => console.warn("catch", c));
-    }
+  };
 
   return (
     <div className="container show">
       <header className="snack-heading">{snacks.name}</header>
       <Card style={{ width: "25rem" }}>
-        <Card.Img variant="dark" src={snacks.image} alt={snacks.name} />
+        <Card.Img
+          variant="dark"
+          src={snacks.image_b64 ? snacks.image_b64 : snacks.image}
+          alt={snacks.name}
+        />
         <Card.Body>
           <Card.Title>
             {snacks.name} <span>{snacks.is_healthy ? "❤️" : "♡"}</span>
