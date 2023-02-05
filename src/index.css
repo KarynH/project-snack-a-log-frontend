@@ -4,7 +4,7 @@ margin: 10px;
 }
 
 body {
-    background-image: url("/Users/karynhuston/project-snack-a-log/front-end/public/Screen Shot 2023-02-03 at 8.16.57 PM.png");
+    background-image: url("/Users/karynhuston/project-snack-a-log/front-end/public/top-view-citrus-fruits-as-pineapple-kiwi-orange-tangerine-slices-kumquat-with-bread-slices-tray-jam-bowl-around-trivet-black-background (1).jpg");
    background-size:cover;
    
 }
@@ -25,3 +25,11 @@ body {
 }
 
 
+.photo-credits a {
+    text-decoration: none;
+    color: darkgrey;
+    float: bottom;
+    float: right;
+    display: list-item;
+    margin-top: 40rem;
+}
