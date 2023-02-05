@@ -4,7 +4,7 @@ margin: 10px;
 }
 
 body {
-    background-image: url("/Users/karynhuston/project-snack-a-log/front-end/public/berries.jpg");
+    background-image: url("/Users/karynhuston/project-snack-a-log/front-end/src/assets/berries.jpg");
    background-size:cover;
    
 }
