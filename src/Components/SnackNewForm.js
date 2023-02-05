@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 
 export default function SnackNewForm() {
   const API = process.env.REACT_APP_API_URL;
-  let { index } = useParams();
+  let { id } = useParams();
   let navigate = useNavigate();
 
   const [snack, setSnack] = useState({
@@ -27,18 +27,18 @@ export default function SnackNewForm() {
   //   };
 
   useEffect(() => {
-    if (!index) return;
+    if (!id) return;
     axios
-      .get(`${API}/snacks/${index}`)
+      .get(`${API}/snacks/${id}`)
       .then((response) => {
         setSnack(response.data);
       })
       .catch((error) => console.error("catch", error));
-  }, [index, API]);
+  }, [id, API]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!index) {
+    if (!id) {
       axios
         .post(`${API}/snacks`, snack)
         .then(() => {
@@ -47,9 +47,9 @@ export default function SnackNewForm() {
         .catch((error) => console.error("catch", error));
     } else {
       axios
-        .put(`${API}/snacks/${index}`, snack)
+        .put(`${API}/snacks/${id}`, snack)
         .then(() => {
-          navigate(`/snacks/${index}`);
+          navigate(`/snacks/${id}`);
         })
         .catch((error) => console.error("catch", error));
     }
@@ -61,7 +61,7 @@ export default function SnackNewForm() {
         <Form.Label>Snack Name</Form.Label>
         <Form.Control
           type="text"
-          placeholder={index ? snack.name : "Enter the snack's name"}
+          placeholder={id ? snack.name : "Enter the snack's name"}
           value={snack.name}
           onChange={handleTextChange}
         />
@@ -71,9 +71,7 @@ export default function SnackNewForm() {
         <Form.Label>Fiber</Form.Label>
         <Form.Control
           type="text"
-          placeholder={
-            index ? snack.fiber : "Enter how much fiber the snack has"
-          }
+          placeholder={id ? snack.fiber : "Enter how much fiber the snack has"}
           value={snack.fiber}
           onChange={handleTextChange}
         />
@@ -84,7 +82,7 @@ export default function SnackNewForm() {
         <Form.Control
           type="number"
           placeholder={
-            index ? snack.protein : "Enter how much protein the snack has"
+            id ? snack.protein : "Enter how much protein the snack has"
           }
           value={snack.protein}
           onChange={handleTextChange}
@@ -96,7 +94,7 @@ export default function SnackNewForm() {
         <Form.Control
           type="number"
           placeholder={
-            index ? snack.added_sugar : "Enter how much sugar the snack has"
+            id ? snack.added_sugar : "Enter how much sugar the snack has"
           }
           value={snack.added_sugar}
           onChange={handleTextChange}
@@ -107,9 +105,7 @@ export default function SnackNewForm() {
         <Form.Label>Snack Image</Form.Label>
         <Form.Control
           type="text"
-          placeholder={
-            index ? snack.image : "Enter a url for the snack's image"
-          }
+          placeholder={id ? snack.image : "Enter a url for the snack's image"}
           value={snack.image}
           onChange={handleTextChange}
         />
