@@ -21,7 +21,6 @@ function App() {
             <Route path="/snacks/:id/edit" element={<Edit />} />
           </Routes>
           <footer className="photo-credits"><a href="https://www.freepik.com/free-photo/top-view-citrus-fruits-as-pineapple-kiwi-orange-tangerine-slices-kumquat-with-bread-slices-tray-jam-bowl-around-trivet-black-background_26173705.htm#query=food%20black%20background&position=4&from_view=keyword">Image by stockking</a> on Freepik</footer>
-
         </main>
       </Router>
     </div>
