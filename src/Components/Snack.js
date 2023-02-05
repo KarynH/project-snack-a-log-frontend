@@ -1,17 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Snacks from "./Snacks";
+import { Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const Snack = ({ snack }) => {
   return (
     <div className="tastySnackAttackId">
-        <h3>{snack.name}</h3>
-      <Link to={`/snacks/${snack.id}`}>
-        <img src={snack.image} alt={`${snack.name} img`} width="150px" length='150px'/> // I added width and length to the img tag to make the images the same size
-      </Link>
+      <Card style={{ width: "18rem" }}>
+        <Link to={`/snacks/${snack.id}`}>
+          <Card.Img variant="top" src={snack.image} alt={snack.name} />
+        </Link>
+        <Card.Body>
+          <Card.Title>{snack.name}</Card.Title>
+
+          <span>{snack.is_healthy ? "❤️" : "♡"}</span>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
-
 
 export default Snack;
