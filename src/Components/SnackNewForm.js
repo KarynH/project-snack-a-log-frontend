@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -22,9 +22,9 @@ export default function SnackNewForm() {
     setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
-  const handleCheckboxChange = () => {
-    setSnack({ ...snack, is_healthy: !snack.is_healthy });
-  };
+  //   const handleCheckboxChange = () => {
+  //     setSnack({ ...snack, is_healthy: !snack.is_healthy });
+  //   };
 
   useEffect(() => {
     if (!index) return;
