@@ -1,4 +1,4 @@
-import Snacks from "./Snacks";
+// import Snacks from "./Snacks";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -9,9 +9,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-const API = process.env.REACT_APP_API_URL;
+
 
 export default function SnackDetails() {
+
+  const API = process.env.REACT_APP_API_URL;
   const [snacks, setSnacks] = useState([]);
   const { id } = useParams();
 
