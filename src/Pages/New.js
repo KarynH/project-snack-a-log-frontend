@@ -1,3 +1,9 @@
+import SnackNewForm from "../Components/SnackNewForm"
+
 export default function New() {
-    return;
+    return (
+        <div className="newSnack">
+    <SnackNewForm />
+    </div>
+    )
 }

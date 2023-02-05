@@ -4,7 +4,7 @@ margin: 10px;
 }
 
 body {
-    background-image: url("/Users/karynhuston/project-snack-a-log/front-end/public/fruit.jpg");
+    background-image: url("/Users/karynhuston/project-snack-a-log/front-end/public/fruit-g9f6e9a269_1920.jpg");
    background-size:cover;
    
 }
@@ -12,7 +12,7 @@ body {
 .snack-heading {
     font-size: xx-large;
     font-family: sans-serif;
-    color: cornsilk;
+    color: darkgray;
 }
 
 .show {

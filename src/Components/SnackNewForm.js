@@ -1,3 +1,5 @@
 export default function SnackNewForm() {
-    return;
+    return (
+        <h1>New Snacks</h1>
+    )
 }
