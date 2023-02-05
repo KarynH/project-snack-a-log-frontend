@@ -33,3 +33,8 @@ body {
     display: list-item;
     margin-top: 60rem;
 }
+
+.newForm {
+    background-color: rgba(255, 255, 255, 0.533);
+    border-radius: 5px;
+}

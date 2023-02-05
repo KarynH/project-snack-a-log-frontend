@@ -18,7 +18,7 @@ function App() {
             <Route path="/snacks" element={<Index />} />
             <Route path="/snacks/new" element={<New />} />
             <Route path="/snacks/:id" element={<Show />} />
-            <Route path="/snacks/:id/edit" element={<Edit />} />
+            <Route path="/snacks/:id/edit" element={<New />} />
           </Routes>
         </main>
       </Router>
