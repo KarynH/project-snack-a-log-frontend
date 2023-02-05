@@ -1,6 +1,7 @@
-/* .tastySnackAttackId {
-
-}*/
+.tastySnackAttackId  {
+display: inline-block;
+margin: 10px;
+}
 
 body {
     background-image: url("/Users/karynhuston/project-snack-a-log/front-end/public/Screen Shot 2023-02-03 at 8.16.57 PM.png");
@@ -22,6 +23,5 @@ body {
     align-items: center;
 
 }
-
 
 
