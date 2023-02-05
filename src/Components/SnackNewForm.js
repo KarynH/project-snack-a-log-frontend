@@ -49,7 +49,7 @@ export default function SnackNewForm() {
       axios
         .put(`${API}/snacks/${id}`, snack)
         .then(() => {
-          navigate(`/snacks/${id}`);
+          navigate(`/snacks`);
         })
         .catch((error) => console.error("catch", error));
     }
